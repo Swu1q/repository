@@ -1,5 +1,5 @@
+@import "reset.css";
 body, html {
-  margin-left: 135px;
   font-family: "Roboto", serif;
   background-color: #0F172A;
 }
@@ -11,12 +11,17 @@ body, html {
   -webkit-text-fill-color: transparent;
 }
 
-.header__nav-row {
-  display: flex;
+.header__container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 10px;
+  padding: 33px 10px;
 }
 
-.header__nav-right {
-  margin-left: 592px;
+.header__nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__nav-btn {
@@ -43,11 +48,11 @@ body, html {
   gap: 2px;
 }
 
-.header__down-wrapper {
+.hero-wrapper {
   margin-top: 85px;
 }
 
-.header__down-h3 {
+.hero-h3 {
   font-weight: 700;
   font-size: 48px;
   align-items: center;
@@ -56,22 +61,39 @@ body, html {
   color: white;
 }
 
-.header__down-p {
+.hero-brand {
+  margin-top: 47px;
+  max-width: 341px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-p {
+  margin-top: 48px;
   color: #cbd5e1;
   font-weight: 500;
   font-size: 26px;
+  line-height: 140%;
 }
 
-.header__down-img {
-  position: absolute;
-  top: 230px;
-  left: 1150px;
-}
-
-.header__down-brand {
+.hero__brand img {
+  margin-top: 48px;
   display: flex;
-  height: 100px;
-  width: 100px;
+  gap: 32px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 30px 100px 0 rgba(0, 0, 0, 0.15);
+}
+
+.hero__container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .recent_project-p {

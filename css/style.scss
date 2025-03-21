@@ -1,5 +1,7 @@
+@import "mixins.scss";
+@import "vars.scss";
+@import "reset.css";
 body,html {
-  margin-left: 135px;
   font-family: "Roboto" , serif;
   background-color: #0F172A;
 }
@@ -9,12 +11,14 @@ body,html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.header__container {
+  @include container;
+  padding: 33px 10px;
+}
 .header__nav-row {
   display: flex;
-}
-.header__nav-right {
-  margin-left: 592px;
+  justify-content: space-between;
+  align-items: center;
 }
 .header__nav-btn {
   align-items: center;
@@ -37,10 +41,10 @@ body,html {
   align-items: center;
   gap: 2px;
 }
-.header__down-wrapper {
+.hero-wrapper {
   margin-top: 85px;
 }
-.header__down-h3 {
+.hero-h3 {
   font-weight: 700;
   font-size: 48px;
   align-items: center;
@@ -48,20 +52,30 @@ body,html {
   display: flex;
   color: white;
 }
-.header__down-p {
-  color: #cbd5e1;
+.hero-brand {
+  margin-top: 47px;
+  max-width: 341px;
+  @include space-between;
+  gap: 16px;
+}
+.hero-p {
+  margin-top: 48px;
+  color: $secondary;
   font-weight: 500;
   font-size: 26px;
+  line-height: 140%;
 }
-.header__down-img {
-  position: absolute;
-  top: 230px;
-  left: 1150px;
-}
-.header__down-brand {
+.hero__brand img {
+  margin-top: 48px;
   display: flex;
-  height: 100px;
-  width: 100px;
+  gap: 32px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 30px 100px 0 rgba(0, 0, 0, 0.15);
+}
+.hero__container {
+  @include container;
+  @include space-between;
 }
 .recent_project-p {
   position: relative;

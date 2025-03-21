@@ -1,3 +1,13 @@
-@import url("mixins.scss");
-@import url("vars.scss");
-@import url("reset.css");
+
+
+
+@mixin container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
